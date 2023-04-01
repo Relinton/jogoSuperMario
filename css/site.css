@@ -48,17 +48,45 @@
     animation: pulo 500ms ease-out;
 }
 
-.button {
+.iniciar {
     background-color: #167BF7;
     border-radius: 5px;
     padding: 1rem;
     color: #FFFFFF;
     margin: 0;
     position: absolute;
-    top: 0;
+    top: 92%;
     left: 40%;
 }
 
+
+
+
+.relogio {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #000;
+    border-radius: 3%;
+    color: #fff;
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    height: 100px;
+    width: 250px;
+}
+
+.cronometro {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #000;
+    border-radius: 3%;
+    color: #fff;
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    height: 100px;
+    width: 250px;
+}
 
 
 @keyframes cano-de-animacao {
