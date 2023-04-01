@@ -1,5 +1,6 @@
 const mario = document.querySelector('.mario');
 const cano = document.querySelector('.cano');
+const botaoIniciar = document.querySelector('.iniciar');
 
 const pulo = () => {
     mario.classList.add('pulo');
@@ -25,6 +26,7 @@ const loop = setInterval(() => {
         mario.style.marginLeft = '5px';
 
         clearInterval(loop);
+        botaoIniciar.style.display = 'block';
         
     }
 
