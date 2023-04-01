@@ -1,4 +1,4 @@
-﻿* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,19 +21,6 @@
     animation: cano-de-animacao 1.5s infinite linear;
 }
 
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-margin: 0 45%;
-}
-
 @media (max-width: 500px) {
     .cano {
         position: absolute;
@@ -41,19 +28,6 @@ margin: 0 45%;
         width: 9%;
         animation: cano-de-animacao 1.5s infinite linear;
     }
-
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-margin: 0 33%;
-}
 }
 
 .mario {
@@ -82,15 +56,19 @@ margin: 0 33%;
     }
 
     40% {
-        bottom: 180px;
+        bottom: 300px;
     }
 
     50% {
-        bottom: 180px;
+        bottom: 300px;
     }
 
     60% {
-        bottom: 180px;
+        bottom: 300px;
+    }
+
+    70% {
+        bottom: 300px;
     }
 
     100% {
