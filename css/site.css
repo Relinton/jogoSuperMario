@@ -49,11 +49,10 @@
 }
 
 .button {
-    background-color: var(--botao-azul);
+    background-color: #167BF7;
     border-radius: 5px;
     padding: 1rem;
-    color: var(--branco-principal);
-
+    color: #FFFFFF;
     margin: 0;
     position: absolute;
     top: 0;
