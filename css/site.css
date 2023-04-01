@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+}
+
 .game-mario {
     width: 100%;
     height: 100vh;
@@ -39,6 +47,20 @@
 .pulo {
     animation: pulo 500ms ease-out;
 }
+
+.button {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1rem;
+    color: var(--branco-principal);
+
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+
 
 @keyframes cano-de-animacao {
     from {
