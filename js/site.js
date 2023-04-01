@@ -1,87 +1,33 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+const mario = document.querySelector('.mario');
+const cano = document.querySelector('.cano');
+
+const pulo = () => {
+    mario.classList.add('pulo');
+
+    setTimeout(() => {
+        mario.classList.remove('pulo');
+    }, 500);
 }
 
-.game-mario {
-    width: 100%;
-    height: 100vh;
-    border-bottom: 15px solid rgb(35, 160, 35);
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(#87CEEB, #E0F6FF)
-}
+const loop = setInterval(() => {
 
-.cano {
-    position: absolute;
-    bottom: 0;
-    width: 4%;
-    animation: cano-de-animacao 1.5s infinite linear;
-}
+    const posicaoDoCano = cano.offsetLeft;
+    const posicaoDoMario = +window.getComputedStyle(mario).bottom.replace('px', '');
 
-@media (max-width: 500px) {
-    .cano {
-        position: absolute;
-        bottom: 0;
-        width: 9%;
-        animation: cano-de-animacao 1.5s infinite linear;
-    }
-}
+    if (posicaoDoCano <= 120 && posicaoDoCano > 0 && posicaoDoMario < 80) {
+        cano.style.animation = 'none';
+        cano.style.left = `${posicaoDoCano}px`;
 
-.mario {
-    width: 100px;
-    position: absolute;
-    bottom: 0;
-}
+        mario.style.animation = 'none';
+        mario.style.bottom = `${posicaoDoMario}px`;
 
-.pulo {
-    animation: pulo 500ms ease-out;
-}
+        mario.src = './imagens/gamerOver.png';
+        mario.style.marginLeft = '5px';
 
-@keyframes cano-de-animacao {
-    from {
-        right: -80px;
+        clearInterval(loop);
+        
     }
 
-    to {
-        right: 100%;
-    }
-}
+}, 10);
 
-@keyframes pulo {
-    0% {
-        bottom: 0;
-    }
-
-    40% {
-        bottom: 280px;
-    }
-
-    50% {
-        bottom: 280px;
-    }
-
-    60% {
-        bottom: 280px;
-    }
-
-    70% {
-        bottom: 300px;
-    }
-
-
-    80% {
-        bottom: 300px;
-    }
-
-
-    90% {
-        bottom: 300px;
-    }
-
-    100% {
-        bottom: 0;
-    }
-}
+document.addEventListener('click', pulo)
