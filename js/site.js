@@ -25,6 +25,7 @@ const loop = setInterval(() => {
         mario.style.marginLeft = '5px';
 
         clearInterval(loop);
+        document.addEventListener('click', window.load.refresh())
     }
 
 }, 10);
