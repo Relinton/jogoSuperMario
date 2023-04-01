@@ -25,7 +25,7 @@
     .cano {
         position: absolute;
         bottom: 0;
-        width: 9%;
+        width: 10%;
         animation: cano-de-animacao 1.5s infinite linear;
     }
 }
