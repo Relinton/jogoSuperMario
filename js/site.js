@@ -1,4 +1,4 @@
-﻿const mario = document.querySelector('.mario');
+const mario = document.querySelector('.mario');
 const cano = document.querySelector('.cano');
 
 const pulo = () => {
@@ -25,7 +25,7 @@ const loop = setInterval(() => {
         mario.style.marginLeft = '5px';
 
         clearInterval(loop);
-        document.addEventListener('click', window.load.refresh())
+        
     }
 
 }, 10);
